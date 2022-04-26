@@ -1,0 +1,191 @@
+.letestNews {
+  height: 500px;
+  margin-top: 30px;
+  .newsCardWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .colOne {
+      width: 50%;
+      padding: 0px 60px 0px 0;
+      .imgDiv {
+        position: relative;
+        height: 400px;
+        img {
+          border-radius: 60px 0px 0px 0px;
+          width: 100%;
+          height: 100%;
+        }
+        .onImgCard {
+          position: absolute;
+          background-color: #66c600;
+          height: 100px;
+          width: 80%;
+          margin: 0 10%;
+          border-radius: 0px 50px 0px 50px;
+          bottom: -10%;
+          display: flex;
+          .socialIcons {
+            width: 50%;
+            padding: 2em;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            p {
+              margin: 0 !important;
+              font-size: 20px;
+              cursor: pointer;
+              background-color: #ffffff;
+              border-radius: 50px;
+              width: 50px;
+              height: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &:hover {
+                background: #d7e6c7;
+                transition: 0.3s ease-in;
+              }
+              .twitter {
+                color: #0096fa;
+              }
+              .linkdin {
+                color: #008aca;
+              }
+              .fb {
+                color: #1f64ed;
+              }
+            }
+          }
+          .dateTime {
+            width: 50%;
+            padding: 2em;
+            color: white;
+            /*font-family: 'Quicksand', sans-serif; */
+            p {
+              font-size: 18px;
+              margin: 0;
+              font-family: 'Nunito', sans-serif;
+            }
+          }
+        }
+      }
+    }
+    .colTwo {
+      width: 50%;
+      .cats {
+        color: #66c600;
+        font-size: 20px;
+        font-family: 'Nunito', sans-serif;
+      }
+      .title {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 32px;
+      }
+      .desc {
+        font-family: 'Nunito', sans-serif;
+        color: #7a7a7a;
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #66c600;
+}
+
+@media only screen and (max-width: 1200px) {
+  .letestNews {
+    height: 100%;
+    .newsCardWrapper {
+      display: block;
+      .colOne {
+        width: 100%;
+        padding: 0;
+        .imgDiv {
+          height: 500px;
+        }
+      }
+      .colTwo {
+        width: 100%;
+        margin-top: 60px;
+        .cats {
+          font-size: 16px;
+        }
+        .title {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .letestNews {
+    // margin: 0 12px;
+    padding-bottom: 50px;
+    .newsCardWrapper {
+      padding: 0 0 0 12px;
+
+      .colOne {
+        .imgDiv {
+          height: 250px;
+          .onImgCard {
+            position: absolute;
+            background-color: #66c600;
+            height: auto;
+            width: 100%;
+            margin: 0;
+            border-radius: 0px 0px 0px 50px;
+            bottom: -20%;
+            display: flex;
+            .socialIcons {
+              width: 50%;
+              padding: 1em;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              p {
+                font-size: 20px;
+                cursor: pointer;
+                background-color: #ffffff;
+                border-radius: 50px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+                &:hover {
+                  background: #d7e6c7;
+                  transition: 0.3s ease-in;
+                }
+                .twitter {
+                  color: #0096fa;
+                }
+                .linkdin {
+                  color: #008aca;
+                }
+                .fb {
+                  color: #1f64ed;
+                }
+              }
+            }
+            .dateTime {
+              width: 50%;
+              padding: 1em;
+              color: white;
+              p {
+                font-size: 18px;
+                margin: 0;
+                font-family: 'Nunito', sans-serif;
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+    }
+  }
+}

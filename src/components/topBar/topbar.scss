@@ -1,0 +1,100 @@
+.navbarWrapper {
+  background-color: #252525;
+}
+.topBar {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  padding: 30px 5px;
+  font-weight: 400;
+  .colOne {
+    display: flex;
+    .location {
+      margin-right: 35px;
+    }
+  }
+  .icon {
+    color: #66c600;
+    font-size: 1.1rem;
+    margin-right: 8px;
+  }
+}
+.navBar {
+  background-color: #66c600;
+  box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 15%);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-bottom: 0%;
+  border-radius: 40px 40px 0 0;
+  z-index: 2;
+  .logo {
+    width: 128px;
+    height: 55px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .nav-link {
+    font-family: 'Quicksand', sans-serif;
+    color: #ffffff !important;
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1em;
+    margin-right: 20px;
+    &:hover {
+      color: #000000 !important;
+      transition: 0.3.5s ease-in;
+    }
+  }
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 1px solid red;
+}
+.firstDiv {
+  width: 20%;
+  // border: 1px solid black;
+  justify-content: flex-end;
+}
+.midDiv {
+  width: 60%;
+  justify-content: center;
+}
+.lastDiv {
+  width: 20%;
+  // border: 1px solid black;
+}
+// .searchBar {
+//   justify-content: flex-end;
+//   cursor: pointer;
+//   .searchDiv {
+//     display: flex;
+//     span {
+//       white-space: nowrap;
+//       margin-right: 15px;
+//     }
+//   }
+// }
+.searchBar {
+  white-space: nowrap;
+}
+@media only screen and (min-width: 992px) {
+  .navBar {
+    height: 100px;
+  }
+}
+
+.searchIcon {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1em;
+}

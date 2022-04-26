@@ -1,0 +1,82 @@
+.knowEvContainer {
+  margin-top: 30px;
+  .knowEvheader {
+    text-align: center;
+    h2 {
+      font-family: 'Nunito', sans-serif;
+      color: #66c600;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    h1 {
+      color: #252525;
+      font-size: 48px;
+      font-family: 'Quicksand', sans-serif;
+    }
+  }
+  .knowEvSlider {
+    margin-top: 72px;
+    padding: 5px !important;
+
+    .knowEvCardContainer {
+      border-width: 2px;
+      border: 1px solid #e6e3e3;
+      border-radius: 10px;
+      height: 550px;
+      .imgDiv {
+        height: 246px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px 10px 0 0;
+        }
+      }
+      .knowEvCardContent {
+        padding: 25px;
+        .title {
+          color: #539f01;
+          font-size: 22px;
+          font-family: 'Quicksand', sans-serif;
+        }
+        .desc {
+          font-family: 'Nunito', sans-serif;
+          color: #777777;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+      .knowEvCardFooter {
+        padding: 15px 30px;
+        margin-bottom: 0;
+        border-top: 1px solid #eaeaea;
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Nunito', sans-serif;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .cats {
+          width: 50%;
+          display: flex;
+          justify-content: flex-end;
+          p {
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #539f01;
+            cursor: pointer;
+            span {
+              display: block;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: #539f01;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

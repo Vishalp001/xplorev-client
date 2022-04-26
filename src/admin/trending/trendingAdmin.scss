@@ -1,0 +1,35 @@
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+.CreatePost {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    font-size: 35px;
+    font-family: 'Quicksand', sans-serif;
+    margin-right: 20px;
+  }
+}
+.trendingAdmin {
+  width: calc(100vw - 248px);
+  table {
+    width: 100%;
+    overflow: hidden;
+    .title {
+      width: 20%;
+    }
+    .desc {
+      width: 30%;
+    }
+    .date,
+    .cate,
+    .delete,
+    .edit {
+      width: 10%;
+    }
+    .srNo {
+      width: 2%;
+    }
+  }
+}

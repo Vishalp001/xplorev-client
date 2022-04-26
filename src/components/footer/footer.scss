@@ -1,0 +1,98 @@
+footer {
+  background-color: #252525;
+  .footerContainer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    .info {
+      width: 20%;
+      .imgDiv {
+        width: 130px;
+        height: 48px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      p {
+        margin-top: 15px;
+        list-style: 23px;
+        font-size: 16px;
+        font-family: 'Nunito', sans-serif;
+        color: #ffffff;
+      }
+    }
+    .quickContact,
+    .otherPage,
+    .socialMedia {
+      width: 20%;
+      color: #ffffff;
+      font-family: 'Nunito', sans-serif;
+      h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      p {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #66c600;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  .credit {
+    margin-top: 50px;
+    background: #66c600;
+    height: 48px;
+    border-radius: 40px 40px 0 0;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+      box-shadow 0.3s;
+    border-radius: 40px 40px 0px 0px;
+    color: #ffffff;
+    text-align: center;
+    p {
+      padding-top: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  footer {
+    .footerContainer {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .info {
+        width: 100%;
+      }
+      .quickContact,
+      .otherPage,
+      .socialMedia {
+        width: 100%;
+      }
+    }
+    .credit {
+      margin-top: 50px;
+      background: #66c600;
+      height: 48px;
+      border-radius: 40px 40px 0 0;
+      transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s;
+      border-radius: 40px 40px 0px 0px;
+      color: #ffffff;
+      text-align: center;
+      p {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Quicksand', sans-serif; */

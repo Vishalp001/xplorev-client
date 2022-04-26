@@ -1,0 +1,79 @@
+.evImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .EVimgDiv {
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #58ab00;
+    margin: 0 50px 50px 0;
+    padding: 5px;
+    label {
+      cursor: pointer;
+      svg {
+        color: #58ab00;
+        font-size: 50px;
+      }
+    }
+    input {
+      display: none;
+    }
+    img {
+      border-radius: 10px;
+      margin: 10px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+
+.write {
+  .title {
+    border: 1px solid #58ab00;
+    border-radius: 8px;
+    outline: none;
+    width: 400px;
+    height: 48px;
+    margin: 0 15px 50px 0;
+    padding: 3px 10px;
+    font-size: 18px;
+    &::placeholder {
+      color: #58ab00;
+      text-transform: capitalize;
+    }
+  }
+  .wECSpec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    input {
+      border: 1px solid #58ab00;
+      border-radius: 8px;
+      outline: none;
+      width: 250px;
+      height: 48px;
+      margin: 0 15px 50px 0;
+      padding: 3px 10px;
+      font-size: 18px;
+      &::placeholder {
+        color: #58ab00;
+        text-transform: capitalize;
+      }
+    }
+    .publishBtn {
+      background-color: #58ab00;
+      border-radius: 8px;
+      border: none;
+      color: #fff;
+      outline: none;
+      width: 250px;
+      height: 48px;
+      margin: 0 15px 50px 0;
+      padding: 3px 10px;
+      font-size: 18px;
+    }
+  }
+}

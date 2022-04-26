@@ -1,0 +1,93 @@
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+
+.find {
+  .findHeading {
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 20px 20px 0 0;
+    padding: 15px 38px 15px 40px;
+    background-color: #66c600;
+    width: 25%;
+    h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 16px;
+      line-height: 28px;
+      color: #ffffff;
+    }
+  }
+  .inputs {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    border-radius: 0 40px 40px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #707070;
+    box-shadow: 5px 7px 20px 0px rgb(0 0 0 / 10%);
+    .inpBtns {
+      font-size: 15px;
+      text-align: left;
+      padding-left: 40px;
+      position: relative;
+      font-weight: 600;
+      width: 25%;
+      border: none;
+      outline: none;
+      border-right: 1px solid grey;
+      height: 80px;
+      background-color: transparent;
+      color: rgba(19, 40, 61, 0.5);
+      &:focus {
+        outline: none;
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .inputlogo {
+          margin-right: 50px;
+          .inputArrow {
+            font-size: 25px;
+            font-weight: bold;
+            color: #66c600;
+          }
+        }
+      }
+      &:hover {
+        .inputlogo {
+          transition: 0.3s ease-in;
+          margin-top: 15px;
+        }
+      }
+    }
+    .submitBtn {
+      font-family: 'Quicksand', sans-serif;
+      width: 25%;
+      height: 80px;
+      padding-left: 40px;
+      background: #66c600;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      border-radius: 0 40px 40px 0;
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btnlogo {
+          margin-right: 50px;
+          .btnArrow {
+            font-size: 25px;
+            font-weight: bold;
+          }
+        }
+      }
+      &:hover {
+        .btnlogo {
+          margin-right: 40px;
+          transition: 0.3s ease-in;
+        }
+      }
+    }
+  }
+}

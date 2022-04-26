@@ -1,0 +1,25 @@
+.ACarNameInput {
+  margin-left: 15px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding: 3px 15px;
+  color: aliceblue;
+  background-color: #4cb92c;
+  height: 48px;
+}
+.evType {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+    span {
+      font-size: 22px;
+      margin-left: 10px;
+      font-weight: bold;
+      color: #4cb92c;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fcfcff;
+  font-family: 'Quicksand', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited,
+a:hover {
+  color: inherit !important;
+}
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+
+@media only screen and (max-width: 1000px) {
+  .swiper-slide {
+    height: auto !important;
+  }
+}
+.wecPostLoader {
+  border: 1px solid #58ab00;
+  border-radius: 8px;
+  outline: none;
+  width: 250px;
+  height: 48px;
+  margin: 0 15px 50px 0;
+  padding: 3px 10px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid #66c600;
+}
+.wecPostLoader img {
+  width: 100%;
+  height: 100%;
+}
+
+.viewEdit {
+  cursor: pointer;
+  color: #58ab00;
+  font-weight: bold;
+  font-size: 17px;
+}
+.deleteBtn {
+  font-size: 17px;
+  cursor: pointer;
+  color: rgb(233, 39, 39);
+  font-weight: bold;
+}

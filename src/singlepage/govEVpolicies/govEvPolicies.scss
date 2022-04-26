@@ -1,0 +1,110 @@
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+.govEvPolicies {
+  .govEvPoliciesHeader h1 {
+    padding: 25px 50px;
+    background-image: linear-gradient(90deg, rgb(91, 216, 49), rgb(29, 128, 4));
+    text-align: center;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: aliceblue;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 8px;
+    @media only screen and (max-width: 1024px) {
+      padding: 12.5px 25px;
+      font-size: 20px;
+      height: 150px;
+      letter-spacing: 4px;
+    }
+  }
+  .subHeading {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    @media only screen and (max-width: 1024px) {
+      margin-top: 50px;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+  }
+  .gEvPDate {
+    .gEvPDateColOne {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      .gEvPContent {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        padding: 15px;
+        @media only screen and (max-width: 1024px) {
+          margin-bottom: 50px;
+          width: 100%;
+          padding: 0;
+          align-items: flex-start;
+        }
+        .imgDiv {
+          margin-right: 15px;
+          height: 100px;
+          width: 100px;
+          min-width: 100px;
+          min-height: 100px;
+          @media only screen and (max-width: 1024px) {
+            margin-right: 10px;
+            height: 70px;
+            width: 70px;
+            min-width: 70px;
+            min-height: 70px;
+          }
+          img {
+            border: 0.3px solid #58ab00;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+        .gEvPInnerContent {
+          h1 {
+            font-size: 20px;
+            color: #111111;
+            font-weight: 500;
+            font-family: 'Quicksand', sans-serif;
+            margin-bottom: 3px;
+          }
+          p {
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #a5a5a5;
+          }
+          .readGovPBtn {
+            border: none;
+            outline: none;
+            background-color: #58ab00;
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            padding: 8px 15px;
+            box-shadow: 0px 4px 3px 0px rgb(0 0 0 / 12%);
+            border-radius: 30px 30px 30px 0px;
+            color: #ffffff;
+            transition: all 0.3s;
+            &:hover {
+              border-radius: 30px 0px 30px 30px;
+              background-color: #252525;
+            }
+          }
+        }
+      }
+    }
+  }
+}

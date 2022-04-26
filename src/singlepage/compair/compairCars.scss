@@ -1,0 +1,151 @@
+.CCompair {
+  .selectCar {
+    margin: 25px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .inputOne,
+    .inputTwo {
+      width: 100%;
+      margin: 15px;
+    }
+    .compairBtn {
+      width: 250px;
+      height: 48px;
+      background-color: #66c600;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      color: #fff;
+    }
+  }
+  .compairHeader {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-between;
+    background: #00b09b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #96c93d,
+      #00b09b
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #96c93d,
+      #00b09b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #fff;
+    padding: 40px;
+    width: 100%;
+    border-radius: 60px 0 60px 0;
+    align-items: center;
+    .imgDiv {
+      width: 50%;
+      img {
+        border-radius: 60px 0 60px 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+    .carName {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      font-family: 'Quicksand', sans-serif;
+      span {
+        margin: 0 10px;
+        font-size: 28px;
+      }
+      .nameOne,
+      .nameTwo {
+        width: 40%;
+        font-size: 35px;
+      }
+    }
+  }
+  .tableHead {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    border-radius: 60px 0 60px 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 180%;
+    color: #fff;
+    letter-spacing: 2px;
+    .spec {
+      width: 20%;
+    }
+    .name {
+      width: 40%;
+      text-align: center;
+    }
+  }
+  .tableDiv {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 15px;
+    background: #00b09b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #96c93d,
+      #00b09b
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #96c93d,
+      #00b09b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 25px;
+    border-radius: 60px 0 60px 0;
+
+    table {
+      // border-collapse: separate;
+      // border-spacing: 5px;
+      width: 100%;
+      border-radius: 20px;
+      align-items: center;
+      text-align: left;
+      tr {
+        &:hover {
+          cursor: pointer;
+          td:nth-child(2),
+          td:nth-child(3) {
+            transition: 0.1s ease-in-out;
+            color: #000;
+            font-size: 22px;
+          }
+        }
+      }
+      tr td {
+        padding: 0 10px;
+      }
+      td:first-child {
+        width: 20%;
+        height: 60px;
+        color: #000;
+        font-size: 22px;
+        border-bottom: 1px solid #fff;
+
+        font-family: 'Quicksand', sans-serif;
+      }
+      td:nth-child(2),
+      td:nth-child(3) {
+        text-align: center;
+        width: 40%;
+        font-family: 'Nunito', sans-serif;
+        color: #fff;
+        font-size: 18px;
+        // outline: 0.4px solid #58ab00;
+        // border-radius: 35px 0 35px 0 !important;
+        transition: 0.2s ease-in;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}

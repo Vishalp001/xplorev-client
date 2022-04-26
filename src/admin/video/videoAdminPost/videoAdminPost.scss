@@ -1,0 +1,23 @@
+.deleteEdit {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    font-family: 'Nunito', sans-serif;
+    height: 40px;
+    width: 80px;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    color: aliceblue;
+    border-radius: 3px;
+    &:first-child {
+      background: teal;
+    }
+    &:last-child {
+      background: tomato;
+    }
+    &:hover {
+      background: #555;
+    }
+  }
+}

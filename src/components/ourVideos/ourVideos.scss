@@ -1,0 +1,41 @@
+.ourVideosSlider {
+  margin-top: 30px;
+  .swiper-slide {
+    border-radius: 8px;
+    overflow: hidden !important;
+    padding: 0 12px;
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: translate3D(1px, -1px, 1px) scale(1.05);
+        overflow: hidden !important;
+      }
+    }
+  }
+  .imgDiv {
+    position: relative;
+    height: 500px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px !important;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  .ytThumble {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    z-index: 1;
+    svg {
+      color: rgb(208, 3, 3);
+      font-size: 100px;
+    }
+  }
+  .detailsSection {
+    padding: 15px 0;
+    .videoName {
+      font-size: 22px;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+.chargingStations {
+  .chargingStationsHEader h1 {
+    padding: 25px 50px;
+    background-image: linear-gradient(90deg, rgb(91, 216, 49), rgb(29, 128, 4));
+    text-align: center;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: aliceblue;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    @media only screen and (max-width: 1024px) {
+      padding: 12.5px 25px;
+      font-size: 20px;
+      height: 150px;
+      letter-spacing: 4px;
+    }
+  }
+  .inputBoxs {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  h2 {
+    font-family: 'Nunito', sans-serif;
+    margin: 25px 0;
+    text-align: center;
+  }
+  .cSCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .cSCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 20px;
+      width: 380px;
+      min-height: 200px;
+      border-radius: 10px;
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s;
+      &:hover {
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+      }
+      &:first-child {
+        background: radial-gradient(#60efbc, #58d5c9);
+      }
+      &:nth-child(2) {
+        background: radial-gradient(#f588d8, #c0a3e5);
+      }
+      &:nth-child(3) {
+        background: radial-gradient(#76b2fe, #b69efe);
+      }
+      &:nth-child(4) {
+        background: radial-gradient(#fbc1cc, #fa99b2);
+      }
+      &:nth-child(5) {
+        background: radial-gradient(#1fe4f5, #3fbafe);
+      }
+      &:nth-child(6) {
+        background: radial-gradient(#60efbc, #58d5c9);
+      }
+      &:nth-child(7) {
+        background: radial-gradient(#f588d8, #c0a3e5);
+      }
+      &:nth-child(8) {
+        background: radial-gradient(#76b2fe, #b69efe);
+      }
+      &:nth-child(9) {
+        background: radial-gradient(#fbc1cc, #fa99b2);
+      }
+      &:nth-child(10) {
+        background: radial-gradient(#1fe4f5, #3fbafe);
+      }
+      &:nth-child(11) {
+        background: radial-gradient(#60efbc, #58d5c9);
+      }
+
+      p {
+        margin: 0;
+        color: #fff;
+      }
+      .name {
+        display: flex;
+        color: #fff;
+        align-items: center;
+        p {
+          font-weight: 600;
+          font-size: 23px;
+          line-height: 28px;
+          font-family: 'Quicksand', sans-serif;
+        }
+        .boltIcon {
+          font-size: 50px;
+        }
+      }
+      .adderss {
+        font-family: 'Nunito', sans-serif;
+        font-size: 18px;
+        margin: 15px 5px 0 5px;
+      }
+      .rAndD {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        border-radius: 0 0 10px 10px;
+        padding: 8px 12px;
+        // .css-ryrseu-MuiRating-root {
+        //   color: #66c600;
+        // }
+        .css-1c99szj-MuiRating-icon {
+          color: gray;
+        }
+      }
+      .card__link {
+        position: relative;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 18px;
+      }
+      .card__link::after {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        content: '';
+        width: 0%;
+        height: 3px;
+        background-color: rgba(255, 255, 255, 0.6);
+        transition: all 0.5s;
+      }
+      .card__link:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
