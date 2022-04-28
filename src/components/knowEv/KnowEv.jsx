@@ -78,11 +78,11 @@ const KnowEv = (props) => {
                         {new Date(b.createdAt).toDateString()}
                       </div>
                       <div className='cats'>
-                        <Link to={`/knowevpage/?cat=${b.categories}`}>
+                        {/* <Link to={`/knowevpage/?cat=${b.categories}`}>
                           <p>
                             <span></span> {b.categories}
                           </p>
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </Link>

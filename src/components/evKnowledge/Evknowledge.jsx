@@ -64,9 +64,7 @@ const Evknowledge = (props) => {
                   <div className='imgDiv'>
                     <img src={fC.coursePhoto} alt='coursePhoto' />
                   </div>
-                  <h1 className='title'>
-                    <a href=''> {fC.title}</a>
-                  </h1>
+                  <h1 className='title'>{/* <a href=''> {fC.title}</a> */}</h1>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: `${fC.desc.substring(0, 200)}...`,

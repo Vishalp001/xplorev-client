@@ -17,7 +17,7 @@ const Home = (props) => {
   return (
     <>
       <Topbar />
-      <Trending trendings={props.trendings} />
+      {/* <Trending trendings={props.trendings} /> */}
       <UpcomingEv
         upcoming={props.upcoming}
         upcomingBike={props.upcomingBike}

@@ -36,7 +36,7 @@ const Trending = ({ trendings }) => {
                 <div
                   className='sliderDiv'
                   style={{
-                    backgroundImage: `url(${t.photo})`
+                    backgroundImage: `url(${t.photo})`,
                   }}
                 >
                   <div className='blogContainer'>
