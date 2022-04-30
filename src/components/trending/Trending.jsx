@@ -1,19 +1,20 @@
-import React, { useState } from 'react'
+import { Axios } from '../../Utility'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
-import { Link } from 'react-router-dom'
-
+import { Link, useLocation } from 'react-router-dom'
+import Loader from '../../components/loader/Loader'
 import 'swiper/css'
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 import './trending.scss'
-// import required modules
 import { Pagination } from 'swiper'
 
 const Trending = ({ trendings }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
+
   return (
     <>
       <div className='trendindContainer'>
@@ -78,7 +79,7 @@ const Trending = ({ trendings }) => {
               <SwiperSlide key={p._id} className='thumbCard'>
                 <div className='innerThumb'>
                   <h6 className='cats'>{p.categories}</h6>
-                  <h1 className='title'>{p.title}</h1>
+                  <p className='title'>{p.title}</p>
                 </div>
               </SwiperSlide>
             ))}

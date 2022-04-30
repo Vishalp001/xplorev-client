@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { useLocation } from 'react-router-dom'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import './trendingAdminPost.scss'
 import { Context } from '../../../context/Context'
 
@@ -49,7 +49,7 @@ const TrendingAdminPost = () => {
 
   useEffect(() => {
     const GetPost = async () => {
-      const res = await axios.get(`/trending/${path}`)
+      const res = await Axios.get(`/trending/${path}`)
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
@@ -62,7 +62,7 @@ const TrendingAdminPost = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/trending/${path}`, {
+      await Axios.delete(`/trending/${path}`, {
         data: { username: user.username },
       })
       window.location.replace('/admin')
@@ -75,7 +75,7 @@ const TrendingAdminPost = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/trending/${path}`, {
+      await Axios.put(`/trending/${path}`, {
         username: user.username,
         title,
         desc,

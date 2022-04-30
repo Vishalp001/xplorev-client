@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 const Topbarpage = () => {
   return (
     <>
-      {/* <div className='navbarWrapper'>
+      <div className='navbarWrapper'>
         <div className='topBar'>
           <div className='colOne'>
             <div className='location'>
@@ -27,10 +27,12 @@ const Topbarpage = () => {
         </div>
         <Navbar collapseOnSelect expand='lg' className='navBar'>
           <Container className='navBarContainer'>
-            <Navbar.Brand className='link firstDiv' as={Link} to='/'>
-              <div className='logo'>
-                <img src={newLogo} alt='XplorEV' />
-              </div>
+            <Navbar.Brand className='firstDiv'>
+              <Link className='link' to='/'>
+                <div className='logo'>
+                  <img src={newLogo} alt='XplorEV' />
+                </div>
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse className='midDiv' id='responsive-navbar-nav'>
@@ -54,9 +56,7 @@ const Topbarpage = () => {
                   <NavDropdown.Item as={Link} to='/trendingnews'>
                     Trending News
                   </NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to='/videos'>
-                    Videos
-                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to='/videos'>Videos</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title='Knowledge Hub' id='basic-nav-dropdown'>
                   <NavDropdown.Item as={Link} to='/freecourses'>
@@ -80,7 +80,7 @@ const Topbarpage = () => {
             </NavbarCollapse>
           </Container>
         </Navbar>
-      </div> */}
+      </div>
     </>
   )
 }

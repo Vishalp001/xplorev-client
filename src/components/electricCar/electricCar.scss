@@ -55,7 +55,7 @@ font-family: 'Quicksand', sans-serif; */
         font-family: 'Nunito', sans-serif;
         font-size: 16px;
         color: #ffffff;
-        border: 1px solid #539f01;
+        padding: 5px 10px;
         height: 36px;
         transition: 0.3s ease-in-out;
         border-radius: 6px;
@@ -63,12 +63,6 @@ font-family: 'Quicksand', sans-serif; */
           color: #ffffff;
           background: #539f01;
         }
-      }
-      .compair {
-        width: 30%;
-      }
-      .specification {
-        width: 60%;
       }
     }
   }

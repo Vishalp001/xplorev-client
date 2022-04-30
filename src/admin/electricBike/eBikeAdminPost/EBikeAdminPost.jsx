@@ -3,7 +3,7 @@ import './eBikeAdminPost.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { useLocation } from 'react-router-dom'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import { Context } from '../../../context/Context'
 
 import 'swiper/css/free-mode'
@@ -41,7 +41,7 @@ const CarSpecificationBlog = () => {
 
   useEffect(() => {
     const GetPost = async () => {
-      const res = await axios.get(`/ebike/${path}`)
+      const res = await Axios.get(`/ebike/${path}`)
       setPost(res.data)
       setEBikeName(res.data.eBikeName)
       setEBikePrice(res.data.eBikePrice)
@@ -62,7 +62,7 @@ const CarSpecificationBlog = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/ebike/${path}`, {
+      await Axios.delete(`/ebike/${path}`, {
         data: { username: user.username },
       })
       window.location.replace('/admin')
@@ -75,7 +75,7 @@ const CarSpecificationBlog = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/ebike/${path}`, {
+      await Axios.put(`/ebike/${path}`, {
         username: user.username,
         eBikeName,
         eBikePrice,

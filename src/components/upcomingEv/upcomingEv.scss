@@ -87,6 +87,7 @@ font-family: 'Quicksand', sans-serif; */
     .carsBtn {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       button {
         border: none;
         outline: none;
@@ -94,20 +95,14 @@ font-family: 'Quicksand', sans-serif; */
         font-family: 'Nunito', sans-serif;
         font-size: 16px;
         color: #ffffff;
-        border: 1px solid #539f01;
         height: 36px;
         transition: 0.3s ease-in-out;
         border-radius: 6px;
+        padding: 5px 10px;
         &:hover {
           color: #ffffff;
           background: #539f01;
         }
-      }
-      .compair {
-        width: 30%;
-      }
-      .specification {
-        width: 60%;
       }
     }
   }

@@ -1,4 +1,4 @@
-import axios from 'axios'
+import { Axios } from '../../Utility'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from '../../context/Context'
@@ -7,7 +7,7 @@ const VideoAdmin = ({ video }) => {
   const { user } = useContext(Context)
   const handleDelete = async (e) => {
     try {
-      await axios.delete(`/video/${e}`, {
+      await Axios.delete(`/video/${e}`, {
         data: { username: user.username },
       })
       window.location.reload()

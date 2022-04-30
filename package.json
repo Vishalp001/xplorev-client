@@ -2,8 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/api",
-  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
@@ -30,8 +28,7 @@
     "sass": "^1.49.9",
     "styled-components": "^5.3.3",
     "swiper": "^8.0.7",
-    "web-vitals": "^2.1.4",
-    "yarn": "^1.22.18"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,4 +1,4 @@
-import axios from 'axios'
+import { Axios } from '../../Utility'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from '../../context/Context'
@@ -7,7 +7,7 @@ const FreeCourseAdmin = ({ freeCourse }) => {
   const { user } = useContext(Context)
   const handleDelete = async (e) => {
     try {
-      await axios.delete(`/freecourse/${e}`, {
+      await Axios.delete(`/freecourse/${e}`, {
         data: { username: user.username },
       })
       window.location.reload()

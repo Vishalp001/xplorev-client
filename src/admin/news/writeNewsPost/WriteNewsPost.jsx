@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import './writeNewsPost.scss'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import { Context } from '../../../context/Context'
 import dotLoader from '../../../assets/images/dotLoader.svg'
 
@@ -58,14 +58,14 @@ export default function WriteNewsPost() {
       data.append('file', file)
       console.log(data)
       try {
-        const res = await axios.post('/upload', data)
+        const res = await Axios.post('/upload', data)
         newTrendingPost.photo = res.data.url
       } catch (error) {
         console.log('Cant Upload the Photo')
       }
     }
     try {
-      const res = await axios.post('/news', newTrendingPost)
+      const res = await Axios.post('/news', newTrendingPost)
       window.location.replace('/news_admin_post/' + res.data._id)
       setLoader(false)
     } catch (error) {

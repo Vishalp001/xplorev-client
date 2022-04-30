@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import './writeEBikePost.scss'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import { BiAddToQueue } from 'react-icons/bi'
 import { Context } from '../../../context/Context'
 import btnLoading from '../../../assets/images/dotLoader.svg'
@@ -54,7 +54,7 @@ export default function WriteEBikePost() {
       dataOne.append('file', imgOne)
       console.log(dataOne)
       try {
-        const res = await axios.post('/upload', dataOne)
+        const res = await Axios.post('/upload', dataOne)
         newTrendingPost.imgOne = res.data.url
       } catch (error) {
         console.log('Cant Upload the Photo')
@@ -68,7 +68,7 @@ export default function WriteEBikePost() {
       dataTwo.append('file', imgTwo)
       console.log(dataTwo)
       try {
-        const res = await axios.post('/upload', dataTwo)
+        const res = await Axios.post('/upload', dataTwo)
         newTrendingPost.imgTwo = res.data.url
       } catch (error) {
         console.log('Cant Upload the InsImage Photo')
@@ -82,7 +82,7 @@ export default function WriteEBikePost() {
       dataThree.append('file', imgThree)
       console.log(dataThree)
       try {
-        const res = await axios.post('/upload', dataThree)
+        const res = await Axios.post('/upload', dataThree)
         newTrendingPost.imgThree = res.data.url
       } catch (error) {
         console.log('Cant Upload the imgThree Photo')
@@ -96,7 +96,7 @@ export default function WriteEBikePost() {
       dataFour.append('file', imgFour)
       console.log(dataFour)
       try {
-        const res = await axios.post('/upload', dataFour)
+        const res = await Axios.post('/upload', dataFour)
         newTrendingPost.imgFour = res.data.url
       } catch (error) {
         console.log('Cant Upload the imgFour Photo')
@@ -110,7 +110,7 @@ export default function WriteEBikePost() {
       dataFive.append('file', imgFive)
       console.log(dataFive)
       try {
-        const res = await axios.post('/upload', dataFive)
+        const res = await Axios.post('/upload', dataFive)
         newTrendingPost.imgFive = res.data.url
       } catch (error) {
         console.log('Cant Upload the imgFive Photo')
@@ -118,7 +118,7 @@ export default function WriteEBikePost() {
     }
 
     try {
-      const res = await axios.post('/ebike', newTrendingPost)
+      const res = await Axios.post('/ebike', newTrendingPost)
       window.location.replace('/e_bike_admin_post/' + res.data._id)
       setLoader(false)
     } catch (error) {

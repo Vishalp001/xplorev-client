@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import './videoAdminPost.scss'
 import { Context } from '../../../context/Context'
 
@@ -19,7 +19,7 @@ const VideoAdminPost = () => {
 
   useEffect(() => {
     const GetPost = async () => {
-      const res = await axios.get(`/video/${path}`)
+      const res = await Axios.get(`/video/${path}`)
       setPost(res.data)
       setTitle(res.data.title)
       setUrl(res.data.url)
@@ -31,7 +31,7 @@ const VideoAdminPost = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/video/${path}`, {
+      await Axios.delete(`/video/${path}`, {
         data: { username: user.username },
       })
       window.location.replace('/admin')
@@ -44,7 +44,7 @@ const VideoAdminPost = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/video/${path}`, {
+      await Axios.put(`/video/${path}`, {
         username: user.username,
         title,
         url,

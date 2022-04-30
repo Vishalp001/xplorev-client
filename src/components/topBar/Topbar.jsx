@@ -28,10 +28,12 @@ const Topbar = () => {
         </div>
         <Navbar collapseOnSelect expand='lg' className='navBar'>
           <Container className='navBarContainer'>
-            <Navbar.Brand as={Link} className='firstDiv link' to='/'>
-              <div className='logo'>
-                <img src={newLogo} alt='XplorEV' />
-              </div>
+            <Navbar.Brand className='firstDiv'>
+              <Link className='link' to='/'>
+                <div className='logo'>
+                  <img src={newLogo} alt='XplorEV' />
+                </div>
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse className='midDiv' id='responsive-navbar-nav'>

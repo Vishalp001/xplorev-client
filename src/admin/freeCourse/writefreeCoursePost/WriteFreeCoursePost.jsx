@@ -8,7 +8,7 @@ import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import { Context } from '../../../context/Context'
 import dotLoader from '../../../assets/images/dotLoader.svg'
 
@@ -79,7 +79,7 @@ export default function WriteTrendingPost() {
       console.log(dataOne)
 
       try {
-        const res = await axios.post('/upload', dataOne)
+        const res = await Axios.post('/upload', dataOne)
         newTrendingPost.insImage = res.data.url
       } catch (error) {
         console.log(error, 'insImage')
@@ -94,7 +94,7 @@ export default function WriteTrendingPost() {
       console.log(dataTwo)
 
       try {
-        const res = await axios.post('/upload', dataTwo)
+        const res = await Axios.post('/upload', dataTwo)
         newTrendingPost.coursePhoto = res.data.url
       } catch (error) {
         console.log(error, 'coursePhoto')
@@ -102,7 +102,7 @@ export default function WriteTrendingPost() {
     }
 
     try {
-      const res = await axios.post('/freecourse', newTrendingPost)
+      const res = await Axios.post('/freecourse', newTrendingPost)
       window.location.replace('/free_course_admin_post/' + res.data._id)
       setLoader(false)
     } catch (error) {

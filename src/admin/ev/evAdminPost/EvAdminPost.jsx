@@ -3,7 +3,7 @@ import './evAdminPost.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { useLocation } from 'react-router-dom'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import { Context } from '../../../context/Context'
 
 import 'swiper/css/free-mode'
@@ -46,7 +46,7 @@ const CarSpecificationBlog = () => {
 
   useEffect(() => {
     const GetPost = async () => {
-      const res = await axios.get(`/ev/${path}`)
+      const res = await Axios.get(`/ev/${path}`)
       setPost(res.data)
       setevName(res.data.evName)
       setevType(res.data.evtype)
@@ -77,7 +77,7 @@ const CarSpecificationBlog = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/ev/${path}`, {
+      await Axios.delete(`/ev/${path}`, {
         data: { username: user.username },
       })
       window.location.replace('/admin')
@@ -90,7 +90,7 @@ const CarSpecificationBlog = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/ev/${path}`, {
+      await Axios.put(`/ev/${path}`, {
         username: user.username,
         evName,
         evtype,

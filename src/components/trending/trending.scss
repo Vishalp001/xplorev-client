@@ -2,6 +2,7 @@
 font-family: 'Quicksand', sans-serif; */
 .trendindContainer {
   position: relative;
+  height: 110vh;
   .trendingSwiper {
     .swiper {
       width: 100%;
@@ -44,22 +45,23 @@ font-family: 'Quicksand', sans-serif; */
           font-family: 'Nunito', sans-serif;
           color: #7a7a7a;
         }
-        p{
+        p {
           margin: 0;
         }
-        .readBtn{
+        .readBtn {
+          margin-top: 15px;
           border: none;
           outline: none;
           background-color: #58ab00;
           font-family: 'Nunito', sans-serif;
           font-size: 18px;
-          padding: 18px 40px;
+          padding: 14px 40px;
           line-height: 1em;
           box-shadow: 0px 4px 3px 0px rgb(0 0 0 / 12%);
           border-radius: 30px 30px 30px 0px;
           color: #ffffff;
           transition: all 0.3s;
-          &:hover{
+          &:hover {
             border-radius: 30px 0px 30px 30px;
             background-color: #252525;
           }
@@ -68,8 +70,6 @@ font-family: 'Quicksand', sans-serif; */
     }
   }
 }
-
-
 
 @media only screen and (max-width: 1200px) {
   .trendindContainer {
@@ -115,7 +115,7 @@ font-family: 'Quicksand', sans-serif; */
             color: #7a7a7a;
             font-size: 14px;
           }
-          .readBtn{
+          .readBtn {
             margin-top: 20px;
             border: none;
             outline: none;
@@ -132,19 +132,16 @@ font-family: 'Quicksand', sans-serif; */
       }
     }
   }
-  
 }
-
-
 
 .trendingThumb {
   position: absolute;
   right: 0 !important;
-  bottom: 0;
+  bottom: 100px;
 
   .thumbCard {
     width: 311px;
-    height: 256px;
+    height: 200px;
     background: #66c600;
     cursor: pointer;
     margin: 0 !important;
@@ -160,16 +157,25 @@ font-family: 'Quicksand', sans-serif; */
       border-radius: 0px 0px 50px 0px !important;
     }
     .innerThumb {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
       .cats {
-        font-family: 'Nunito', sans-serif;
-        color: #000;
+        font-family: 'Quicksand', sans-serif;
+        color: hsl(136, 71%, 91%);
         font-size: 22px;
         text-transform: capitalize;
+        &:hover {
+          text-decoration: underline;
+        }
       }
       .title {
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Nunito', sans-serif;
         color: #ffffff;
-        font-size: 22px;
+        font-size: 16px;
+        font-weight: 400;
       }
     }
   }
@@ -178,8 +184,7 @@ font-family: 'Quicksand', sans-serif; */
   }
 }
 
-
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) {
   .trendingThumb {
     position: absolute;
     right: 0 !important;
@@ -200,18 +205,18 @@ font-family: 'Quicksand', sans-serif; */
   }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
   .trendingThumb {
     display: none;
     position: absolute;
     right: 15px;
     bottom: -320px;
-    .swiper-wrapper{
+    .swiper-wrapper {
       display: flex;
       justify-content: center;
       flex-direction: column;
       padding: 15px;
-     }
+    }
     .thumbCard {
       width: 100% !important;
       height: 150px;

@@ -7,7 +7,7 @@ import { FaLinkedinIn, FaFacebookF } from 'react-icons/fa'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import { HiMail } from 'react-icons/hi'
 import ReadingBar from '../../../components/readingbar/ReadingBar'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import { useLocation } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -25,11 +25,10 @@ const Blog = (props) => {
   const nextRef = useRef(null)
 
   let { search } = useLocation()
-  console.log(search)
 
   useEffect(() => {
     const GetPost = async () => {
-      const res = await axios.get(`/trending/blogs/${path}`, {
+      const res = await Axios.get(`/trending/blogs/${path}`, {
         params: location.search,
       })
       setPost(res.data)

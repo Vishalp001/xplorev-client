@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './chargingStations.scss'
 import TopbarPage from '../topbarpage/Topbarpage'
-import axios from 'axios'
+import { Axios } from '../../Utility'
 import TextField from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
 import { Rating } from '@mui/material'
@@ -27,7 +27,7 @@ const ChargingStations = () => {
 
   useEffect(() => {
     const fetchStations = async () => {
-      const res = await axios.get('/charging')
+      const res = await Axios.get('/charging')
       let temp = []
       if (res.data.length > 0) {
         res.data.map((data) => temp.push(data.state))
@@ -38,7 +38,7 @@ const ChargingStations = () => {
   }, [])
 
   const getCity = async (citys) => {
-    const res = await axios.get('/charging/citys', { params: citys })
+    const res = await Axios.get('/charging/citys', { params: citys })
     setCitys(res.data[0].citys)
   }
 

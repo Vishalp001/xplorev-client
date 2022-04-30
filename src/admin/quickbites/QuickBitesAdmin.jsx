@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './quickBitesAdmin.scss'
-import axios from 'axios'
+import { Axios } from '../../Utility'
 import { Context } from '../../context/Context'
 
 const QuickBitesAdmin = ({ quickBites }) => {
   const { user } = useContext(Context)
   const handleDelete = async (e) => {
     try {
-      await axios.delete(`/quickbyte/${e}`, {
+      await Axios.delete(`/quickbyte/${e}`, {
         data: { username: user.username },
       })
       window.location.reload()

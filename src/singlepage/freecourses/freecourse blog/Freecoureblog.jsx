@@ -7,7 +7,7 @@ import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
 import { useLocation } from 'react-router-dom'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 
 const Freecoureblog = (props) => {
   const location = useLocation()
@@ -23,7 +23,7 @@ const Freecoureblog = (props) => {
 
   useEffect(() => {
     const GetPost = async () => {
-      const res = await axios.get(`/freecourse/${path}`, {
+      const res = await Axios.get(`/freecourse/${path}`, {
         params: location.search,
       })
       setPost(res.data)

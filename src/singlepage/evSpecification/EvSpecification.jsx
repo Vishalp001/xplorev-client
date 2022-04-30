@@ -8,7 +8,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
 import { useLocation } from 'react-router-dom'
-import axios from 'axios'
+import { Axios } from '../../Utility'
 
 const CarSpecificationBlog = () => {
   const location = useLocation()
@@ -18,7 +18,7 @@ const CarSpecificationBlog = () => {
 
   useEffect(() => {
     const GetPost = async () => {
-      const res = await axios.get(`/ev/${path}`)
+      const res = await Axios.get(`/ev/${path}`)
       setPost(res.data)
     }
     GetPost()

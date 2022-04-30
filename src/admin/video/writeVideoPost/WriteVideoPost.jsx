@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import './writeVideoPost.scss'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import dotLoader from '../../../assets/images/dotLoader.svg'
 import { Context } from '../../../context/Context'
 
@@ -27,14 +27,14 @@ export default function WriteVideoPost() {
       console.log(data)
 
       try {
-        const res = await axios.post('/upload', data)
+        const res = await Axios.post('/upload', data)
         newVideoPost.photo = res.data.url
       } catch (error) {
         console.log('Cant Upload the Photo')
       }
     }
     try {
-      const res = await axios.post('/video', newVideoPost)
+      const res = await Axios.post('/video', newVideoPost)
       window.location.replace('/video_admin_post/' + res.data._id)
       setLoader(false)
     } catch (error) {

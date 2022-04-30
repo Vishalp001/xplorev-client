@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 // import './writeQuickBitesPost.scss'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
 import { Context } from '../../../context/Context'
 import dotLoader from '../../../assets/images/dotLoader.svg'
 import btnLoading from '../../../assets/images/btnLoading.svg'
@@ -59,14 +59,14 @@ export default function WriteQuickBitesPost() {
       console.log(data)
 
       try {
-        const res = await axios.post('/upload', data)
+        const res = await Axios.post('/upload', data)
         newPost.photo = res.data.url
       } catch (error) {
         console.log('Cant Upload the Photo')
       }
     }
     try {
-      const res = await axios.post('/quickbyte', newPost)
+      const res = await Axios.post('/quickbyte', newPost)
       window.location.replace('/quick_bites_admin_post/' + res.data._id)
       setLoader(false)
     } catch (error) {

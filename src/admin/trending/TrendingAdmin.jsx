@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './trendingAdmin.scss'
-import axios from 'axios'
+import { Axios } from '../../Utility'
 import { Context } from '../../context/Context'
 
 const TrendingAdmin = ({ trendings }) => {
@@ -9,7 +9,7 @@ const TrendingAdmin = ({ trendings }) => {
 
   const handleDelete = async (e) => {
     try {
-      await axios.delete(`/trending/${e}`, {
+      await Axios.delete(`/trending/${e}`, {
         data: { username: user.username },
       })
       window.location.reload()
@@ -69,7 +69,9 @@ const TrendingAdmin = ({ trendings }) => {
                     <Link to={`/?cat=${t.categories}`}>{t.categories}</Link>
                   </td>
                   <td className='viewEdit'>
-                    <Link to={`/trending_admin_post/${t._id}`}>View / Edit</Link>
+                    <Link to={`/trending_admin_post/${t._id}`}>
+                      View / Edit
+                    </Link>
                   </td>
                   <td
                     className='deleteBtn'

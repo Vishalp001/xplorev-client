@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { useLocation } from 'react-router-dom'
-import axios from 'axios'
+import { Axios } from '../../../Utility'
+
 import './blogAdminPost.scss'
 import { Context } from '../../../context/Context'
 
@@ -49,7 +50,7 @@ const BlogAdminPost = () => {
 
   useEffect(() => {
     const GetPost = async () => {
-      const res = await axios.get(`/blog/${path}`)
+      const res = await Axios.get(`/blog/${path}`)
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
@@ -62,7 +63,7 @@ const BlogAdminPost = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/blog/${path}`, {
+      await Axios.delete(`/blog/${path}`, {
         data: { username: user.username },
       })
       window.location.replace('/admin')
@@ -75,7 +76,7 @@ const BlogAdminPost = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/blog/${path}`, {
+      await Axios.put(`/blog/${path}`, {
         username: user.username,
         title,
         desc,

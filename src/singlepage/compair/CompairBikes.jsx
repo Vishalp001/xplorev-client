@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './compairCars.scss'
 import Topbar from '../../components/topBar/Topbar'
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
-import axios from 'axios'
+import { Axios } from '../../Utility'
 import { useLocation } from 'react-router-dom'
 
 const CompairBikes = (props) => {
@@ -17,7 +17,7 @@ const CompairBikes = (props) => {
   useEffect(() => {
     const GetPost = async () => {
       setshowTable(false)
-      const res = await axios.get(`/ev/${path}`)
+      const res = await Axios.get(`/ev/${path}`)
       setCarOneData(res.data)
       console.log(res.data)
     }
@@ -28,11 +28,11 @@ const CompairBikes = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const getCarOne = async () => {
-      const res = await axios.get(`/ev/${carNameOne}`)
+      const res = await Axios.get(`/ev/${carNameOne}`)
       setCarOneData(res.data)
     }
     const getCarTwo = async () => {
-      const res = await axios.get(`/ev/${carNameTwo}`)
+      const res = await Axios.get(`/ev/${carNameTwo}`)
       setCarTwoData(res.data)
     }
     getCarOne()
